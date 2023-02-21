@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.bg-img {
+    width: 100%;
+    height: 90%;
+    background-color:#E6E6FA;
+    background-image: url('photos/intro-bg.png');
+    background-size: 100%;
+    filter: blur(3px);
+    position: absolute;
+    z-index: -1;
+}
+
+.intro {
+  width: 100%;
+  height: 90.5%;
+  background-color:#e6e6fada;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro h2  {
+    font-size: 2.5rem;
+    border: .3px solid black;
+    padding: 15px 60px;
+    margin-bottom: 10px;
+}
+
+.intro span {
+    font-size: 1.5rem;
+}
+
+.text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro .img-wrap {
+    max-width: 300px;
+    margin-bottom: 10px;
+}
+
+.img-wrap img{
+    width: 100%;
+    box-shadow: 0 0px 20px 5px #e6e6fa inset;
+    border-radius: 10px;
+}
+
+.intro .socials {
+    font-size: 1.4rem;
+    color: black;
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
