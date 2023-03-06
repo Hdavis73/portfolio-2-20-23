@@ -335,13 +335,15 @@ a {
 
 /* =============== expectations ================= */
 
-.expectations {
-  padding: 80px 15%;
+.expectations,
+.portfolio {
+  padding: 80px 15% 50px 15%;
   text-align: center;
   line-height: 1.2;
 }
 
-.expectations h2 {
+.expectations h2,
+.portfolio h2 {
   font-size: var(--fs-xxl-);
   margin-bottom: 100px;
 }
@@ -375,6 +377,12 @@ a {
 
 .expect i {
   font-size: var(--fs-xxl-);
+}
+
+/* ================ portfolio ======== */
+
+.portfolio {
+  background-color:#f5f5f5
 }
 
 
