@@ -336,9 +336,9 @@ a {
 /* =============== expectations ================= */
 
 .expectations {
-  padding: 45px 15%;
+  padding: 80px 15%;
   text-align: center;
-  line-height: 1.2
+  line-height: 1.2;
 }
 
 .expectations h2 {
@@ -355,8 +355,9 @@ a {
 }
 
 .expectation-boxes .expect {
-  border:1px solid black;
   padding: 15px 15px;
+  background-color: #683a8c0f;
+  position: relative;
 }
 
 .expect h5 {
@@ -365,8 +366,32 @@ a {
   margin-bottom: 5px;
 }
 
+.expect .circle-i-wrap {
+  position: absolute;
+  top: -25px;
+  right: 0;
+  left: 0;
+}
+
+.expect i {
+  font-size: var(--fs-xxl-);
+}
+
 
 /* ================ media queries ========== */
+
+@media screen and (max-width: 900px) {
+  .expectations h2 {
+    margin-bottom: 50px;
+  }
+
+  .expectation-boxes {
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 45px;
+  
+  }
+}
 
 @media screen and (max-width: 600px) {
   .intro .img-wrap {
