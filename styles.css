@@ -444,13 +444,14 @@ a {
   background-color: transparent;
   display: flex;
   flex-direction: column;
-  gap: 6.5px;
+  gap: 6.3px;
 }
 
 .x-line {
   width: 12px;
   height: 3px;
-
+  border-radius: 2px;
+  transition: width ease-in 80ms;
   background-color: #7f15e8c4;
 }
 
@@ -472,8 +473,12 @@ a {
 
 .bottom-x .x-line:nth-of-type(2) {
   transform: rotate(50deg) translate(-4.3px);
-  margin-left: 13.3px;
+  margin-left: 13.2px;
   /* background-color: blue; */
+}
+
+.bottom-x {
+  transform: translate(-.25px)
 }
 
 .x:hover .x-line{
@@ -482,20 +487,25 @@ a {
 
 /* ======= close x end ===== */
 
-.project-popup-wrap.active {
+.project-popup-wrap{
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 10;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
   overflow-y: auto;
   width: 100%;
   height: 100%;
+  display:none
   /* overflow-y: auto; */
+}
+
+.project-popup-wrap.active {
+  display:flex;
 }
 
 div.project-popup {

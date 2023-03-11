@@ -15,13 +15,13 @@ tabsContainer.addEventListener('click', (e) => {
 
 // ======================== project popup =========
 
-const projectBoxes = Array.from(document.querySelectorAll('.project'))
+const projectBoxes = Array.from(document.querySelectorAll('.project'));
 
-projectBoxes.forEach(projectBox => {
-    projectBox.addEventListener('click', () => {
-        let projectPopup = projectBox.querySelector('.project-popup-wrap')
-        projectPopup.classList.add('active')
+projectBoxes.forEach((projectBox) => {
+  projectBox.addEventListener('click', () => {
+    let projectPopup = projectBox.querySelector('.project-popup-wrap');
 
-        document.querySelector('body').classList.add('no-scroll')
-    })
-})
+    projectPopup.classList.add('active');
+    document.querySelector('body').classList.add('no-scroll');
+  });
+});
