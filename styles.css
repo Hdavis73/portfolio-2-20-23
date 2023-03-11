@@ -403,6 +403,10 @@ a {
   margin-bottom: 80px;
 }
 
+.project:hover {
+  border: 1px solid white
+}
+
 .project img {
   width: 100%;
   height: 100%;
@@ -421,6 +425,50 @@ a {
 
 .project span {
   color: rgba(0, 0, 0, 0.546);
+}
+
+      /* =========================project popup ============= */
+
+
+.project-popup-wrap.active {
+  background-color:rgba(255, 255, 255, 0.100);
+  backdrop-filter: blur(20px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* overflow-y: auto; */
+
+}
+
+div.project-popup {
+  background-color:rgba(255, 255, 255, 0.500);
+  width: 80%;
+  z-index: 12;
+  padding: 10px 30px;;
+  cursor:default;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+
+}
+
+.project-popup img {
+  width: 70%;
+  max-width: 800px;
+  max-height: 400px;
+}
+
+.project-popup .btn {
+  display: block;
 }
 
 /* ================ media queries ========== */
