@@ -21,5 +21,7 @@ projectBoxes.forEach(projectBox => {
     projectBox.addEventListener('click', () => {
         let projectPopup = projectBox.querySelector('.project-popup-wrap')
         projectPopup.classList.add('active')
+
+        document.querySelector('body').classList.add('no-scroll')
     })
 })
