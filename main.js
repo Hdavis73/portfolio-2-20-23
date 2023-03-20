@@ -1,6 +1,7 @@
 const tabsContainer = document.querySelector('.about-tabs');
 let aboutSection = document.querySelector('.about-section');
 
+
 tabsContainer.addEventListener('click', (e) => {
   if (e.target.classList.contains('tab-item') && !e.target.classList.contains('active')) {
     tabsContainer.querySelector('.active').classList.remove('active');
@@ -16,30 +17,34 @@ tabsContainer.addEventListener('click', (e) => {
 // ======================== project popup =========
 
 const projectBoxes = Array.from(document.querySelectorAll('.project'));
+const closeBtns = Array.from(document.querySelectorAll('.x'));
 
 
 projectBoxes.forEach((projectBox) => {
   projectBox.addEventListener('click', () => {
     togglePopup(projectBox)
   })
-    // let projectPopup = projectBox.querySelector('.project-popup-wrap');
-
-    // projectPopup.classList.add('active');
-    // document.querySelector('body').classList.add('no-scroll');
-    
-    // projectPopup.querySelector('button').addEventListener('click', () => {
-    // projectPopup.classList.remove('active');
-    // document.querySelector('body').classList.remove('no-scroll');
-
-    // })
-    
-//   });
 });
 
+closeBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    closePopup(btn)
+  })
+})
+
 function togglePopup(projectBox){
-    let projectPopup = projectBox.querySelector('.project-popup-wrap');
+    let projectPopup = projectBox.parentNode.querySelector('.project-popup-wrap');
+  // console.log(projectPopup)
 
+    projectPopup.classList.add('active');
+    document.querySelector('body').classList.add('no-scroll');
+}
 
-    projectPopup.classList.toggle('active');
-    document.querySelector('body').classList.toggle('no-scroll');
+function closePopup(btn){
+  const projectPopup = btn.parentNode.parentNode
+
+  projectPopup.classList.remove('active')
+  document.querySelector('body').classList.remove('no-scroll')
+
+  console.log(projectPopup)
 }
