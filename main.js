@@ -1,7 +1,6 @@
 const tabsContainer = document.querySelector('.about-tabs');
 let aboutSection = document.querySelector('.about-section');
 
-
 tabsContainer.addEventListener('click', (e) => {
   if (e.target.classList.contains('tab-item') && !e.target.classList.contains('active')) {
     tabsContainer.querySelector('.active').classList.remove('active');
@@ -19,32 +18,42 @@ tabsContainer.addEventListener('click', (e) => {
 const projectBoxes = Array.from(document.querySelectorAll('.project'));
 const closeBtns = Array.from(document.querySelectorAll('.x'));
 
-
 projectBoxes.forEach((projectBox) => {
   projectBox.addEventListener('click', () => {
-    togglePopup(projectBox)
-  })
+    togglePopup(projectBox);
+  });
 });
 
-closeBtns.forEach(btn => {
+closeBtns.forEach((btn) => {
   btn.addEventListener('click', () => {
-    closePopup(btn)
-  })
-})
+    closePopup(btn);
+  });
+});
 
-function togglePopup(projectBox){
-    let projectPopup = projectBox.parentNode.querySelector('.project-popup-wrap');
-  // console.log(projectPopup)
+function togglePopup(projectBox) {
+  let projectPopup = projectBox.parentNode.querySelector('.project-popup-wrap');
 
-    projectPopup.classList.add('active');
-    document.querySelector('body').classList.add('no-scroll');
+  projectPopup.classList.add('active');
+  document.querySelector('body').classList.add('no-scroll');
 }
 
-function closePopup(btn){
-  const projectPopup = btn.parentNode.parentNode
+function closePopup(btn) {
+  const projectPopup = btn.parentNode.parentNode;
 
-  projectPopup.classList.remove('active')
-  document.querySelector('body').classList.remove('no-scroll')
+  projectPopup.classList.remove('active');
+  document.querySelector('body').classList.remove('no-scroll');
+}
 
-  console.log(projectPopup)
+// =================== project description ==============
+
+projectBoxes.forEach((project) => {
+  createShortDescription(project);
+});
+
+function createShortDescription(project) {
+  const shortProjectDesciption = project.querySelector('div').querySelector('p');
+  const fullProjectDescription = project.nextElementSibling.firstElementChild.querySelector('p');
+  const textArray = fullProjectDescription.innerText.split(' ').slice(0, 25);
+
+  shortProjectDesciption.innerText = textArray.join(' ');
 }
