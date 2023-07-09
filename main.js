@@ -53,7 +53,7 @@ projectBoxes.forEach((project) => {
 function createShortDescription(project) {
   const shortProjectDesciption = project.querySelector('div').querySelector('p');
   const fullProjectDescription = project.nextElementSibling.firstElementChild.querySelector('p');
-  const textArray = fullProjectDescription.innerText.split(' ').slice(0, 25);
+  const textArray = fullProjectDescription.innerText.split(' ').slice(0, 38);
 
   shortProjectDesciption.innerText = textArray.join(' ');
 }

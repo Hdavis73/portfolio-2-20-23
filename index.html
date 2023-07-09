@@ -70,13 +70,14 @@
         <!-- <h3>skills</h3> -->
 
         <div class="about-tabs">
-          <button type="button" class="tab-item" data-target="#description">description</button>
-          <button type="button" class="tab-item active" data-target="#experience">experience</button>
+          <button type="button" class="tab-item active" data-target="#description">description</button>
+          <button type="button" class="tab-item" data-target="#education">education</button>
+          <button type="button" class="tab-item" data-target="#experience">experience</button>
         </div>
 
-        <!-- Educations Start -->
+        <!-- Description Start -->
 
-        <div class="tab-content description" id="description">
+        <div class="tab-content description active" id="description">
           <p>
             I am a Software Developer with experience mainly focusing on Front-End Web Development. For most of my life I had planned to be in the medical field, but after switching gears and falling in love with all things tech, I started Web
             Development as a freelance job. I am passionate about using my skills in HTML, CSS and Javascript to create beautiful websites that satisfy the needs of my client, and go above and beyond expectation. I sweat the details, and as a result
@@ -88,19 +89,30 @@
           </p>
         </div>
 
-        <!-- Educations End -->
+        <!-- Description End -->
+
+        <!-- Education Start -->
+        <div class="tab-content" id="education">
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="date">Western Govorners University - Graduating October 2024</span>
+              <h4>Bachelors of Science in Software Engineering</h4>
+            </div>
+          </div>
+        </div>
+        <!-- Education End -->
 
         <!-- Expierience Start -->
 
-        <div class="tab-content active" id="experience">
+        <div class="tab-content" id="experience">
           <div class="timeline">
             <div class="timeline-item">
               <span class="date">05/17/2022 - Present Day</span>
               <h4>Freelance/Contract Web Developer</h4>
               <p>
                 As a Freelance/Contract Software Developer, I have built and maintained multiple websites of different sizes for a range of clients and businesses. Throughout these projects, I have focused all my efforts on writing clean and
-                efficient code to create ease of use and editing of these websites, and providing my clients with an easy-going experience, maintaining open lines of communication, and taking progressive feedback to ensure the final result is exactly
-                what my client is looking for.
+                efficient code to create ease of use/editing of these websites, and providing my clients with an easy-going experience; maintaining open lines of communication, and taking progressive feedback to ensure the final result is exactly
+                what they are looking for.
               </p>
             </div>
           </div>
@@ -173,11 +185,48 @@
       <h2>My Projects</h2>
 
       <section class="project-wrap">
+
         <div class="project-item">
           <div class="project">
-            <img src="/photos/Media Review.png" alt="" />
+            <img src="/photos/Hilltop-Memories.png" alt="" />
             <div class="project-description">
-              <p>nipper Letter of Marque transom Buccaneer Privateer. Chain Shot ho Letter of Marque hornswaggle booty fathom jack bounty maroon Barbary Coast. Nipperkin Barbary Coast measured fer yer chains</p>
+              <p></p>
+              <span>Read More...</span>
+            </div>
+          </div>
+
+          <div class="project-popup-wrap">
+            <div class="project-popup">
+              <button class="x">
+                <div class="top-x">
+                  <div class="x-line"></div>
+                  <div class="x-line"></div>
+                </div>
+                <div class="bottom-x">
+                  <div class="x-line"></div>
+                  <div class="x-line"></div>
+                </div>
+              </button>
+              
+              <img src="/photos/Hilltop-Memories.png" alt="" />
+              <p>Hilltop Memories is a website for an Event Center on the rise. The main purpose of this website was
+                to give potential clients of this company a one-stop-shop to see the entire building and get an idea of what
+                it offers, and give them ways to contact the owners either through the websites contact form or in other ways
+                listed on the site. The main challenge while building this site was the design. This was the first client project
+                I was given full control over designing and wording, so I went for a modernized southernesque feel to reflect the 
+                property and the owners.
+              </p>
+              <span>Technologies Used: HTML, CSS, Javascript</span>
+              <a href="https://hilltop-memories.com/" class="link"><button class="btn">Visit Website</button></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="project">
+            <img src="/photos/Media Review.png" alt="Media Review Site" />
+            <div class="project-description">
+              <p></p>
               <span>Read More...</span>
             </div>
           </div>
@@ -195,10 +244,14 @@
               </button>
 
               <img src="/photos/Media Review.png" alt="" />
-              <p>nipper Letter of Marque transom Buccaneer Privateer. Chain Shot ho Letter of Marque hornswaggle booty fathom jack bounty maroon Barbary Coast. Nipperkin Barbary Coast measured fer yer chains</p>
-              <p>nipper Letter of Marque transom Buccaneer Privateer. Chain Shot ho Letter of Marque hornswaggle booty fathom jack bounty maroon Barbary Coast. Nipperkin Barbary Coast measured fer yer chains</p>
-              <span>Technologies Used: html, css, javascript</span>
-              <button class="btn"><a href="" class="link">Visit Website</a></button>
+              <p>This project is a recration of my project for ILF. The project features a slider full of 
+                movies, and each tile displays the title, description, rating, release date and trailer link on click.
+                On page load the slider displays the top 20 movies, and the search function allows the user to search for whatever movie they want.
+                This project required great knowledge of client side API's and pulls from multiple API's to display the information.
+                The original project also included a preference option which saves cookies and displays different media based on those cookies,
+                and a login feature for the ILF website.</p>
+              <span>Technologies Used: HTML, CSS, Javascript</span>
+              <a href="https://movie-media-search.netlify.app/" class="link"><button class="btn">Visit Website</button></a>
             </div>
           </div>
         </div>
@@ -207,7 +260,7 @@
           <div class="project">
             <img src="/photos/Hair Salon.png" alt="" />
             <div class="project-description">
-              <p>nipper Letter of Marque transom Buccaneer Privateer. Chain Shot ho Letter of Marque hornswaggle booty fathom jack bounty maroon Barbary Coast. Nipperkin Barbary Coast measured fer yer chains</p>
+              <p></p>
               <span>Read More...</span>
             </div>
           </div>
@@ -226,41 +279,12 @@
               </button>
 
               <img src="/photos/Media Review.png" alt="" />
-              <p>nipper Letter of Marque transom Buccaneer Privateer. Chain Shot ho Letter of Marque hornswaggle booty fathom jack bounty maroon Barbary Coast. Nipperkin Barbary Coast measured fer yer chains</p>
-              <p>nipper Letter of Marque transom Buccaneer Privateer. Chain Shot ho Letter of Marque hornswaggle booty fathom jack bounty maroon Barbary Coast. Nipperkin Barbary Coast measured fer yer chains</p>
-              <span>Technologies Used: html, css, javascript</span>
-              <button class="btn"><a href="" class="link">Visit Website</a></button>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-item">
-          <div class="project">
-            <img src="/photos/Hair Salon.png" alt="" />
-            <div class="project-description">
-              <p>nipper Letter of Marque transom Buccaneer Privateer. Chain Shot ho Letter of Marque hornswaggle booty fathom jack bounty maroon Barbary Coast. Nipperkin Barbary Coast measured fer yer chains</p>
-              <span>Read More...</span>
-            </div>
-          </div>
-
-          <div class="project-popup-wrap">
-            <div class="project-popup">
-              <button class="x">
-                <div class="top-x">
-                  <div class="x-line"></div>
-                  <div class="x-line"></div>
-                </div>
-                <div class="bottom-x">
-                  <div class="x-line"></div>
-                  <div class="x-line"></div>
-                </div>
-              </button>
-
-              <img src="/photos/Media Review.png" alt="" />
-              <p>nipper Letter of Marque transom Buccaneer Privateer. Chain Shot ho Letter of Marque hornswaggle booty fathom jack bounty maroon Barbary Coast. Nipperkin Barbary Coast measured fer yer chains</p>
-              <p>nipper Letter of Marque transom Buccaneer Privateer. Chain Shot ho Letter of Marque hornswaggle booty fathom jack bounty maroon Barbary Coast. Nipperkin Barbary Coast measured fer yer chains</p>
-              <span>Technologies Used: html, css, javascript</span>
-              <button class="btn"><a href="" class="link">Visit Website</a></button>
+              <p>The main purpose of this project is to show off Ayesha Highlights in the best light. It displays
+                lots of images and contrasting colors in a fun and unique layout. The main challenge in this project was
+                to correlate all the information and images in a way that makes sense, and is eye catching and enticing 
+                to the user.</p>
+              <span>Technologies Used: HTML, CSS, Javascript</span>
+              <a href="https://ayeshahighlights.netlify.app/" class="link"><button class="btn">Visit Website</button></a>
             </div>
           </div>
         </div>
