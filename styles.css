@@ -364,12 +364,13 @@ a {
   padding: 15px 15px;
   background-color: #683a8c0f;
   position: relative;
+  width: 33%;
 }
 
 .expect h5 {
   font-size: var(--fs-s);
   margin-top: 20px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .expect .circle-i-wrap {
@@ -388,8 +389,7 @@ a {
 .portfolio {
   background-color: #f5f5f5;
   padding-bottom: 100px;
-  padding-left: 7%;
-  padding-right: 7%;
+  padding: 0px 7%;
 }
 
 .project-wrap {
@@ -435,7 +435,6 @@ a {
   width: 90%;
   left: 5%;
   bottom: -70px;
-  /* margin-bottom: -200px; */
 }
 
 .project span {
@@ -446,7 +445,6 @@ a {
 
 /* ============= close x ======== */
 .x {
-  margin-top: 100px;
   align-self: flex-end;
   cursor: pointer;
   height: 40px;
@@ -456,9 +454,8 @@ a {
   display: flex;
   flex-direction: column;
   gap: 6.3px;
-  /* position: absolute; */
-  top: -60px;
-  right: 0px;
+  position: relative; 
+  /* top: 30px; */
 }
 
 .x-line {
@@ -508,14 +505,13 @@ a {
   top: 0;
   left: 0;
   z-index: 10;
-  /* display: flex; */
   justify-content: center;
   align-items: center;
-  overflow-y: auto;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
   width: 100%;
-  height: 100%;
-  display:none
-  /* overflow-y: auto; */
+  max-height: 100%;
+  display: none;
 }
 
 .project-popup-wrap.active {
@@ -529,21 +525,20 @@ div.project-popup {
   z-index: 12;
   padding: 20px 30px;
   cursor: default;
-  overflow-y: auto;
+  overflow: visible;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  overflow-y: auto;
-  scroll-behavior: smooth;
+  max-height: 100%;
 }
 
 .project-popup img {
   width: 60%;
   max-width: 800px;
   max-height: 400px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .project-popup .btn {
@@ -552,6 +547,13 @@ div.project-popup {
   border: none;
   cursor: pointer;
 }
+
+
+
+/* TESTING */
+
+
+
 
 /* ================ media queries ========== */
 
@@ -564,6 +566,14 @@ div.project-popup {
     flex-direction: column;
     justify-content: space-between;
     gap: 45px;
+  }
+
+
+}
+
+@media screen and (max-width: 700px){
+  .expectation-boxes .expect {
+    width: 100%;
   }
 }
 
