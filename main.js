@@ -57,3 +57,18 @@ function createShortDescription(project) {
 
   shortProjectDesciption.innerText = textArray.join(' ');
 }
+
+// ============== close on click outside popup =============
+
+const popupWraps = Array.from(document.querySelectorAll('.project-popup-wrap'));
+
+popupWraps.forEach((popupWrap) => {
+  const popup = popupWrap.querySelector('.project-popup');
+
+  popupWrap.addEventListener('click', ({ target }) => {
+    if (target != popup && target.parentNode != popup) {
+      popupWrap.classList.remove('active');
+      document.querySelector('body').classList.remove('no-scroll');
+    }
+  });
+});
