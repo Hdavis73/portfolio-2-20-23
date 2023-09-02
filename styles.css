@@ -348,7 +348,8 @@ a {
 }
 
 .expectations h2,
-.portfolio h2 {
+.portfolio h2,
+.contact-form h2 {
   font-size: var(--fs-xxl-);
   margin-bottom: 100px;
 }
@@ -386,15 +387,18 @@ a {
 
 /* ================ portfolio ======== */
 
-.portfolio {
+.portfolio,
+.contact-form {
   background-color: #f5f5f5;
   padding-bottom: 100px;
-  padding: 0px 7%;
+  padding: 50px 7%;
+  padding-bottom: 100px;
+  /* padding-top: 50px; */
 }
 
 .project-wrap {
   display: flex;
-  gap: 25px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
@@ -402,8 +406,8 @@ a {
   background-size: 100% 100%;
   /* position: relative; */
   border-radius: 5px;
-  width: 48.85%;
-  max-width: 600px;
+  max-width: 48%;
+  /* max-width: 600px; */
   display: flex;
   aspect-ratio: 4/3;
   justify-content: center;
@@ -454,7 +458,10 @@ a {
   display: flex;
   flex-direction: column;
   gap: 6.3px;
-  position: relative; 
+  /* position: relative;  */
+  position: absolute;
+  bottom: 11px;
+  right: 11px;
   /* top: 30px; */
 }
 
@@ -510,7 +517,7 @@ a {
   overflow-y: scroll;
   scroll-behavior: smooth;
   width: 100%;
-  max-height: 100%;
+  height: 100%;
   display: none;
 }
 
@@ -525,13 +532,14 @@ div.project-popup {
   z-index: 12;
   padding: 20px 30px;
   cursor: default;
-  overflow: visible;
+  /* overflow: scroll; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  max-height: 100%;
+  height: 100%;
+  min-height: 650px;
 }
 
 .project-popup img {
@@ -544,13 +552,56 @@ div.project-popup {
 .project-popup .btn {
   display: block;
   background-color: transparent;
-  border: none;
+  border: 0px;
   cursor: pointer;
 }
 
 
+/*============== contact form ================= */
+.contact-form {
+  background-color: white;
+  text-align: center;
+  padding-bottom: 3%;
+  padding-top: 0px;
+}
 
-/* TESTING */
+.contact-form h2 {
+  margin-bottom: 50px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 50%;
+  padding: 100px 20px;
+  background-color: #f5f5f5;
+  height: 100%;
+  position: absolute;
+  /* margin: auto; */
+  left: 25%;
+}
+
+form .name {
+  width: 100%;
+
+}
+
+form .name input {
+  width: 49.5%;
+}
+
+form input,
+form textarea {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+form .btn {
+  width: 150px;
+  margin: 10px auto;
+}
 
 
 
@@ -566,6 +617,15 @@ div.project-popup {
     flex-direction: column;
     justify-content: space-between;
     gap: 45px;
+  }
+
+  .project .project-description{
+    bottom: -110px;
+  }
+
+  .contact-form form {
+    width: 65%;
+    left: 19%;
   }
 
 
@@ -589,5 +649,25 @@ div.project-popup {
 
   .description {
     padding: 0 25px;
+  }
+
+  .project-item {
+    width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+    margin-bottom: 100px;
+  }
+
+  .project .project-description{
+    bottom: -90px;
+  }
+
+  .contact-form form {
+    width: 95%;
+    left: 2.5%;
+  }
+
+  form .name input {
+    width: 48.5%;
   }
 }
