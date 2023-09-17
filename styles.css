@@ -93,6 +93,7 @@ a {
   background-image: url('photos/intro-bg.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  max-height: 500px;
   /* filter: blur(3px); */
   position: absolute;
   z-index: -1;
@@ -221,7 +222,8 @@ a {
   margin-bottom: 40px;
 }
 
-.about-tabs .tab-item {
+.about-tabs .tab-item,
+.portfolio-tabs .tab-item {
   padding: 2px 0;
   background-color: transparent;
   border: none;
@@ -237,11 +239,13 @@ a {
   transition: all 0.3s ease;
 }
 
-.about-tabs .tab-item:last-child {
+.about-tabs .tab-item:last-child,
+.portfolio-tabs .tab-item:last-child {
   margin: 0;
 }
 
-.about-tabs .tab-item::before {
+.about-tabs .tab-item::before,
+.portfolio-tabs .tab-item::before {
   content: '';
   position: absolute;
   left: 0;
@@ -252,16 +256,19 @@ a {
   transition: width 0.3s ease;
 }
 
-.about-tabs .tab-item:hover::before {
+.about-tabs .tab-item:hover::before,
+.portfolio-tabs .tab-item:hover::before {
   width: 100%;
 }
 
-.about-tabs .tab-item.active::before {
+.about-tabs .tab-item.active::before,
+.portfolio-tabs .tab-item.active::before {
   width: 100%;
   background-color: var(--main-color);
 }
 
-.about-tabs .tab-item.active {
+.about-tabs .tab-item.active,
+.portfolio-tabs .tab-item.active {
   color: var(--main-color);
   opacity: 1;
   cursor: auto;
@@ -281,13 +288,18 @@ a {
   background-color: var(--main-color);
 }
 
-.about-text .tab-content {
+.about-text .tab-content,
+.portfolio .tab-content {
   /* padding: 40px 0; */
   display: none;
 }
 
-.about-text .tab-content.active {
+.about-text .tab-content.active{
   display: block;
+}
+
+.portfolio .tab-content.active {
+  display: flex;
 }
 
 .about-text .timeline-item {
@@ -396,10 +408,12 @@ a {
   /* padding-top: 50px; */
 }
 
-.project-wrap {
+.project-wrap,
+.school-project-wrap {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  margin-top: 40px;
 }
 
 .project-item {
@@ -441,8 +455,14 @@ a {
   bottom: -70px;
 }
 
+.project .project-description p {
+  text-align: center;
+}
+
 .project span {
   color: rgba(0, 0, 0, 0.546);
+  display: block;
+  text-align: center;
 }
 
 /* =========================project popup ============= */
@@ -545,7 +565,7 @@ div.project-popup {
 .project-popup img {
   width: 60%;
   max-width: 800px;
-  max-height: 400px;
+  /* max-height: 400px; */
   /* margin-top: 20px; */
 }
 

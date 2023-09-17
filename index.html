@@ -37,39 +37,7 @@
     <!-- ============================================================================================= -->
 
     <section class="about-section sec-padding" id="about">
-      <!-- <div class="container"> -->
-      <!--    <div class="row">
-            <div class="section-title">
-                <h2>about me</h2>
-            </div>
-        </div> -->
-
-      <!-- <div class="row">
-            <div class="about-img">
-                <div class="img-box">
-                    <img src="photos/headshots/comp_two.png" alt="">
-                </div>
-            </div> -->
-
       <div class="about-text">
-        <!-- <p>I am a Software Developer with experience mainly focusing on Front-End Web Development.
-                For most of my life I had planned to be in the medical field, but after switching gears and
-                falling in love with all things tech, I started Web Development as a freelance job. I am
-                passionate about using my skills in HTML, CSS and Javascript to create beautiful websites
-                that satisfy the needs of my client, and go above and beyond expectation. I sweat the
-                details,
-                and as a result driven person I want my work to reflect that.
-                <br>
-                <br>
-                I am happiest when I'm problem solving, exploring and making ideas come to life. Outside the
-                computer,
-                I am a servant to my many plants, a baker, and an avid learner. My love of learning
-                languages applies
-                not only to code, but also to those of the spoken variety!
-            </p> -->
-
-        <!-- <h3>skills</h3> -->
-
         <div class="about-tabs">
           <button type="button" class="tab-item active" data-target="#description">description</button>
           <button type="button" class="tab-item" data-target="#education">education</button>
@@ -180,7 +148,12 @@
     <section class="portfolio">
       <h2>My Projects</h2>
 
-      <section class="project-wrap">
+      <div class="portfolio-tabs">
+        <button type="button" class="tab-item active" data-target="#freelance-projects">Freelance Projects</button>
+        <button type="button" class="tab-item" data-target="#school-projects">College Projects</button>
+      </div>
+
+      <section class="project-wrap tab-content active" id="freelance-projects">
         <!-- Hiltop Memories -->
         <div class="project-item">
           <div class="project">
@@ -276,7 +249,7 @@
 
               <img src="/photos/Media Review.png" alt="" />
               <p>
-                This project is a recration of my project for ILF. The project features a slider full of movies, and each tile displays the title, description, rating, release date and trailer link on click. On page load the slider displays the top
+                This project is a recreation of my project for ILF. The project features a slider full of movies, and each tile displays the title, description, rating, release date and trailer link on click. On page load the slider displays the top
                 20 movies, and the search function allows the user to search for whatever movie they want. This project required great knowledge of client side API's and pulls from multiple API's to display the information. The original project also
                 included a preference option which saves cookies and displays different media based on those cookies, and a login feature for the ILF website.
               </p>
@@ -286,20 +259,88 @@
           </div>
         </div>
       </section>
+
+      <!-- TESTING -->
+
+      <section class="school-project-wrap tab-content" id="school-projects">
+        <div class="project-item">
+          <div class="project">
+            <img src="/photos/Texas-cities.png" alt="Media Review Site" />
+            <div class="project-description">
+              <p></p>
+              <span>Read More...</span>
+            </div>
+          </div>
+          <div class="project-popup-wrap">
+            <div class="project-popup">
+              <button class="x">
+                <div class="top-x">
+                  <div class="x-line"></div>
+                  <div class="x-line"></div>
+                </div>
+                <div class="bottom-x">
+                  <div class="x-line"></div>
+                  <div class="x-line"></div>
+                </div>
+              </button>
+
+              <img src="/photos/Texas-cities.png" alt="Texas Cities Site" />
+              <p>
+                This project was done for a Front End Development class. The objective was to choose a state and three cities, then come up with a design and develop it following the proper techniques. I was given a list of elements that had to be in the design such as lists and a table, but aside the research, design and content was done by me.
+              </p>
+              <span>Technologies Used: HTML, CSS</span>
+              <a target="_blank" href="https://texascities.netlify.app/" class="link"><button class="btn">Visit Website</button></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="project">
+            <img src="/photos/" alt="Media Review Site" />
+            <div class="project-description">
+              <p></p>
+              <span>Read More...</span>
+            </div>
+          </div>
+          <div class="project-popup-wrap">
+            <div class="project-popup">
+              <button class="x">
+                <div class="top-x">
+                  <div class="x-line"></div>
+                  <div class="x-line"></div>
+                </div>
+                <div class="bottom-x">
+                  <div class="x-line"></div>
+                  <div class="x-line"></div>
+                </div>
+              </button>
+
+              <img src="/photos/Media Review.png" alt="" />
+              <p>
+                This project is a recreation of my project for ILF. The project features a slider full of movies, and each tile displays the title, description, rating, release date and trailer link on click. On page load the slider displays the top
+                20 movies, and the search function allows the user to search for whatever movie they want. This project required great knowledge of client side API's and pulls from multiple API's to display the information. The original project also
+                included a preference option which saves cookies and displays different media based on those cookies, and a login feature for the ILF website.
+              </p>
+              <span>Technologies Used: HTML, CSS, Javascript</span>
+              <a target="_blank" href="https://movie-media-search.netlify.app/" class="link"><button class="btn">Visit Website</button></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTING END-->
     </section>
 
     <!-- portfolio end -->
     <!-- contact form start  -->
     <section class="contact-form" id="contact-form">
-
-
       <form action="https://formspree.io/f/mknlbjzv" method="POST">
         <h2>Contact Me</h2>
         <div class="name">
-          <input type="text" name="first-name " placeholder="First Name" required/>
-          <input type="text" name="last-name " placeholder="Last Name" required/>
+          <input type="text" name="first-name " placeholder="First Name" required />
+          <input type="text" name="last-name " placeholder="Last Name" required />
         </div>
-        <input type="email" name="email " placeholder="Email" required/>
+        <input type="email" name="email " placeholder="Email" required />
         <textarea name="message" id="" cols="30" rows="10" placeholder="Type here..." required></textarea>
         <button class="btn">Submit</button>
       </form>

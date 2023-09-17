@@ -13,6 +13,21 @@ tabsContainer.addEventListener('click', (e) => {
   }
 });
 
+const portfolioTabsContainer = document.querySelector('.portfolio-tabs');
+const portfolioSection = document.querySelector('.portfolio');
+
+portfolioTabsContainer.addEventListener('click', (e) => {
+  if (e.target.classList.contains('tab-item') && !e.target.classList.contains('active')) {
+    portfolioTabsContainer.querySelector('.active').classList.remove('active');
+    e.target.classList.add('active');
+
+    const target = e.target.getAttribute('data-target');
+
+    portfolioSection.querySelector('.tab-content.active').classList.remove('active');
+    portfolioSection.querySelector(target).classList.add('active');
+  }
+});
+
 // ======================== project popup =========
 
 const projectBoxes = Array.from(document.querySelectorAll('.project'));
