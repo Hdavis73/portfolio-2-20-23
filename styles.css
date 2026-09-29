@@ -209,6 +209,17 @@ a {
 .skills .js {
   color: #ffcf2c;
 }
+.skills .java {
+  color: #f89820;
+}
+
+.skills .python {
+  color: #3776ab;
+}
+
+.skills .sql {
+  color: #4479a1;
+}
 
 .skills .git {
   color: #f05033;
