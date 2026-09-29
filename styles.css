@@ -370,6 +370,10 @@ a {
   line-height: 1.2;
 }
 
+.expectations {
+  background-color: #3a037025;
+}
+
 .expectations h2,
 .portfolio h2,
 .contact-form h2 {
